@@ -3,11 +3,11 @@
 # }
 
 resource "aws_instance" "Nexus" {
-  ami           = "ami-0c802847a7dd848c0"
+  ami           = ""
   key_name = "demo_linux"
   instance_type = "t2.large"
   user_data     = file("nexus.sh")
-  security_groups= [ "security_Group1"]
+  security_groups= [ "ami-094bbd9e922dc515d"]
   count = 1
   tags= {
     Name = "Nexus_mircodegree"
